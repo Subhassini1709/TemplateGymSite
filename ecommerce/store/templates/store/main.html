@@ -45,10 +45,18 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'store' %}">STORE<span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'Contact' %}">CONTACT US<span class="sr-only">(current)</span></a>
+                </li>
 
             </ul>
             <div class="form-inline my-2 my-lg-0">
-                <a href="#" class="btn btn-warning">Login</a>
+
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'Logout' %}" class="btn btn-warning">Logout</a>
+                {% else %}
+                    <a href="{% url 'Login' %}" class="btn btn-warning">Login</a>
+                {% endif %}
 
                 <a href="{% url 'cart' %}">
                     <img id="cart-icon" src="{% static 'images/cart.png' %}">

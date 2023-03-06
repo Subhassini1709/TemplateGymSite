@@ -1,0 +1,57 @@
+{% extends 'store/navbar.html' %} 
+{% load static %} 
+{% block content %} 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" /> 
+  <script src="https://kit.fontawesome.com/26719dd53c.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body id="login">
+  <div>
+    <div class="form-container">
+      <div class="form">
+        <div class="forms">
+          <div class="form-content">
+            <div class="login-form">
+              <div class="title">Login</div>
+              <form method="POST" action="">
+                {% csrf_token %}
+                <div class="input-boxes">
+                  <div class="input-box">
+                    <i class="fas fa-user"></i>
+                    <!-- Inputting a unique username -->
+                    <input type="text" name="username" placeholder="Enter your username" required>  
+                  </div>
+                  <div class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <!-- Inputting a password -->
+                    <input type="password" name="password" placeholder="Enter your password" required>
+                  </div>
+                  <div class="button input-box">
+                    <input type="submit" value="Submit" value="Login">
+                  </div>
+                  <!-- Url leading to the Register page -->
+                  <div class="text login-text">Don't have an account? <a href="{% url 'Register' %}">Signup Now</a></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</body>
+
+</html>
+{% endblock content %}

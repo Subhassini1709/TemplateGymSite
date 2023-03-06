@@ -69,3 +69,8 @@ class ShippingAddress(models.Model):
 
 	def __str__(self):
 		return self.address
+
+class MailID(models.Model):
+    Cname = models.CharField(max_length=100)
+    Cemail = models.EmailField()
+

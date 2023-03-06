@@ -1,0 +1,138 @@
+{% extends 'store/navbar.html' %} 
+{% load static %} 
+{% block content %}  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script
+      src="https://kit.fontawesome.com/26719dd53c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <section class="contact1">
+        <div class="max-width">
+          <h2 class="title">Connect With Us</h2>
+          <div class="contact1-content">
+            <div class="line1">
+              <div class="phone">
+                <h4><i class="fas fa-phone-alt"></i> CALL US</h4>
+                <h1>1700 109 2000</h1>
+              </div>
+              <div class="email">
+                <h4>E-MAIL <i class="fas fa-envelope"></i></h4>
+                <h1>abc@gmail.com</h1>
+              </div>
+            </div>
+            <div class="line2">
+              <h2>Follow Us</h2>
+              <div class="icons1">
+                <li class="fill-back">
+                  <a href="#"
+                    ><span class="fab fa-twitter"></span
+                  ></a>
+                </li>
+                <li class="fill-back">
+                  <a href="#"
+                    ><span class="fab fa-instagram"></span
+                  ></a>
+                </li>
+                <li class="fill-back">
+                  <a href="#"
+                    ><span class="fab fa-facebook-f"></span
+                  ></a>
+                </li>
+                <li class="fill-back">
+                  <a href="#"
+                    ><span class="fab fa-youtube"></span
+                  ></a>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact2">
+        <div class="max-width">
+          <div class="contact2-content">
+            <div class="contact-form">
+              <div class="row header">
+
+                <!-- A form to accept and record user email ID's that opt for Email subscription -->
+
+                <h1>Subscribe to our Emails</h1>
+                <h3>Fill out the form below and we'll get back to you!</h3>
+              </div>
+              <div class="row body">
+                <form action="" method="post">
+                  {% csrf_token %}
+                  <ul>
+                    <li>
+                      <!-- Inputting the user's name -->
+                      <p class="left">
+                        <label for="Cname"
+                          >Name <span class="req"></span></label
+                        >
+                        <input
+                          type="text"
+                          name="Cname"
+                          placeholder="John"
+                          required
+                        />
+                      </p>
+                      
+                    </li>
+                    <li>
+                      <!-- Inputting the user's Email ID-->
+                      <p class="left">
+                        <label for="Cemail"
+                          >Email <span class="req">*</span></label
+                        >
+                        <input
+                          type="email"
+                          name="Cemail"
+                          placeholder="abc@gmail.com"
+                          required
+                        />
+                      </p>
+                      
+                    </li>
+                    <li>
+                      <div class="divider"></div>
+                    </li>
+                    
+                    <li>
+                      <input
+                        class="btn btn-submit"
+                        type="submit"
+                        value="Submit"
+                      />
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    $('.icons1 li').click(function () {
+        $(this).toggleClass("shadow-2").siblings();
+        $(this).toggleClass("fill-color").siblings();
+        $(this).toggleClass("fill-back").siblings();
+    });
+  </script>
+</html>
+{% endblock content %}

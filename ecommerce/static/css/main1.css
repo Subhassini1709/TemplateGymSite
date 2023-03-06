@@ -29,8 +29,10 @@ h1,h2,h3,h4,h5,h6{
 
 .bg-dark{
 	background-color: #4f868c!important;
+}   
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: black;
 }
-
 #cart-icon{
 	width:25px;
 	display: inline-block;

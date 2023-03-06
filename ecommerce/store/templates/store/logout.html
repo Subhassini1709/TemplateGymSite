@@ -1,0 +1,85 @@
+<!-- {% extends 'store/main.html' %}  -->
+{% load static %} 
+<!-- {% block content %}  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>logout</title>
+    <meta name="viewport" content="width=device-width,initial scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+	
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: beige;
+      }
+	  * {
+        
+        background-color: black;
+      }
+
+      .btn {
+        width: 250px;
+        height: 70px;
+        border-radius: 50px;
+        border: 2px solid #cba774;
+      }
+
+      .btn:hover {
+        background-color: gray;
+      }
+      .btn {
+        width: 250px;
+        height: 70px;
+        border-radius: 50px;
+        border: 2px solid #cba774;
+		color: black;
+		background-color: white;
+      }
+
+      .mainbody {
+        background-color: black;
+
+        padding-top: 80px;
+        padding-right: 80px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+      }
+
+      .intro {
+        text-align: center;
+      }
+
+      h1 {
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <div class="mainbody">
+    <body>
+      <div class="container">
+        <div class="intro">
+          <h1>You have been logged out!</h1>
+
+          <!-- Url for logging in again -->
+          <a href="{% url 'Login' %}">
+            <button class="btn">Login Again</button></a
+          >
+        </div>
+      </div>
+    </body>
+  </div>
+</html>
+
+<!-- {% endblock content %} -->
